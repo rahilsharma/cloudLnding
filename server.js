@@ -1,4 +1,4 @@
-// set up ======================================================================
+// Our variables
 var express  = require('express');
 var app      = express();
 var accounts = [];
@@ -6,16 +6,22 @@ var accNames=[];
 var tokken="";
 var jsonloanAPIresponse={};
 var oauth;
+var request = require('request');
 app.use(express.static(__dirname + '/public'));
 var nforce = require('nforce');
 
+
+
+//using nforce to get token which will be used later=========================================================
 var org = nforce.createConnection({
     clientId: '3MVG9JZ_r.QzrS7iWfpjhjXxEdlXH_PgO4PMaBBYxsMj2J5.4Dq8zpC6XYN1WM3wRxtvSEqVoBHXpY4RlW69M',
     clientSecret: '1649334025533170124',
     redirectUri: 'http://localhost:3000/oauth/_callback',
     autoRefresh:true
 });
-//Gets our borrower Id
+
+
+//Gets our borrower Id================================================================================
 var fn=function callAPI(token){
     tokken=token;
     console.log(token);
@@ -46,14 +52,21 @@ var fn=function callAPI(token){
     }
     request.get(options, callback);
 };
-//authenticating using username and password
+
+
+
+
+
+//authenticating using username and password=======================================================================================
 org.authenticate({ username: 'darpan@69demo.com', password: 'Merc123!cAsAYYSHbDMGs3tjQMyQiQ80'}, function(err, resp){
     // store the oauth object for this user
     if(!err) oauth = resp;
     fn(oauth.access_token);
 });
-var request = require('request');
-//our APIs that are being called
+
+
+//our APIs that are being called===============================================================================================
+//thos api gives account num count and account num
 app.get('/SalesForceAPI/number', function (req,res) {
 var jsonOBJ={
     length:accounts.length,
@@ -62,6 +75,8 @@ var jsonOBJ={
 };
     res.send(jsonOBJ);
 });
+
+//this api gives LoanInfo related to oned account
 app.get('/Sales/:LoanInfo', function (req,res) {
     var reqLoanInfo=req.query.LoanInfo;
     console.log('cm her');
@@ -70,9 +85,12 @@ app.get('/Sales/:LoanInfo', function (req,res) {
 console.log('this started');
 
 })
+
+//for all request redirect to this url
 app.get('*',function(req,res){
     res.redirect('/public');
 });
+
 var loanAPI=function callAPI(token,reqLoanInfo,res){
 
     var options = {
@@ -86,7 +104,7 @@ var loanAPI=function callAPI(token,reqLoanInfo,res){
         console.log('came till here');
         if (!error && response.statusCode == 200) {
             var info = JSON.parse(body);
-        //   console.log(info.content);
+          console.log(info.content);
             var tmp=[];
             var tmp1=[];
             for(var i=0;i<info.content.length;i++){
@@ -108,7 +126,6 @@ var loanAPI=function callAPI(token,reqLoanInfo,res){
     }
     request.get(options, callback);
 };
-
 // listen (start app with node server.js) ======================================
 app.listen(8000);
 console.log("App listening on port " + 8000);
