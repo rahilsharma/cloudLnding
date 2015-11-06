@@ -1,0 +1,246 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.40
+4 verbose node symlink /usr/bin/node
+5 warn package.json node-cloudlending@0.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/rs/Desktop/cloud/cloudlending-master',
+7 verbose install   [ 'express', 'nforce', 'request' ] ]
+8 info preinstall node-cloudlending@0.0.0
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'express@latest', null ]
+11 verbose cache add name=undefined spec="express@latest" args=["express@latest",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'express@latest',
+12 verbose parsed url   path: 'express@latest',
+12 verbose parsed url   href: 'express@latest' }
+13 verbose cache add [ 'nforce@latest', null ]
+14 verbose cache add name=undefined spec="nforce@latest" args=["nforce@latest",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'nforce@latest',
+15 verbose parsed url   path: 'nforce@latest',
+15 verbose parsed url   href: 'nforce@latest' }
+16 verbose cache add [ 'request@latest', null ]
+17 verbose cache add name=undefined spec="request@latest" args=["request@latest",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'request@latest',
+18 verbose parsed url   path: 'request@latest',
+18 verbose parsed url   href: 'request@latest' }
+19 verbose cache add name="express" spec="latest" args=["express","latest"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'latest',
+20 verbose parsed url   path: 'latest',
+20 verbose parsed url   href: 'latest' }
+21 verbose addNamed [ 'express', 'latest' ]
+22 verbose addNamed [ null, null ]
+23 verbose cache add name="nforce" spec="latest" args=["nforce","latest"]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'latest',
+24 verbose parsed url   path: 'latest',
+24 verbose parsed url   href: 'latest' }
+25 verbose addNamed [ 'nforce', 'latest' ]
+26 verbose addNamed [ null, null ]
+27 verbose cache add name="request" spec="latest" args=["request","latest"]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: 'latest',
+28 verbose parsed url   path: 'latest',
+28 verbose parsed url   href: 'latest' }
+29 verbose addNamed [ 'request', 'latest' ]
+30 verbose addNamed [ null, null ]
+31 silly lockFile c30a01ab-express-latest express@latest
+32 verbose lock express@latest /home/rs/.npm/c30a01ab-express-latest.lock
+33 silly lockFile f165c982-nforce-latest nforce@latest
+34 verbose lock nforce@latest /home/rs/.npm/f165c982-nforce-latest.lock
+35 silly lockFile 5da6dfb1-request-latest request@latest
+36 verbose lock request@latest /home/rs/.npm/5da6dfb1-request-latest.lock
+37 info addNameTag [ 'express', 'latest' ]
+38 info addNameTag [ 'nforce', 'latest' ]
+39 info addNameTag [ 'request', 'latest' ]
+40 verbose request where is /nforce
+41 verbose request registry https://registry.npmjs.org/
+42 verbose request id d957129b044fa51a
+43 verbose url raw /nforce
+44 verbose url resolving [ 'https://registry.npmjs.org/', './nforce' ]
+45 verbose url resolved https://registry.npmjs.org/nforce
+46 verbose request where is https://registry.npmjs.org/nforce
+47 info trying registry request attempt 1 at 08:01:30
+48 http GET https://registry.npmjs.org/nforce
+49 verbose request where is /request
+50 verbose request registry https://registry.npmjs.org/
+51 verbose url raw /request
+52 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+53 verbose url resolved https://registry.npmjs.org/request
+54 verbose request where is https://registry.npmjs.org/request
+55 info trying registry request attempt 1 at 08:01:30
+56 verbose etag "8ZO1JT00G4SD7KPAD1377CVKP"
+57 http GET https://registry.npmjs.org/request
+58 verbose request where is /express
+59 verbose request registry https://registry.npmjs.org/
+60 verbose url raw /express
+61 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+62 verbose url resolved https://registry.npmjs.org/express
+63 verbose request where is https://registry.npmjs.org/express
+64 info trying registry request attempt 1 at 08:01:30
+65 verbose etag "8LVCJV70MHHBQS6U4JDQF1IQ9"
+66 http GET https://registry.npmjs.org/express
+67 http 200 https://registry.npmjs.org/nforce
+68 silly registry.get cb [ 200,
+68 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+68 silly registry.get     etag: '"8EYBGFROTJH3L0EBGB27HY0FB"',
+68 silly registry.get     'content-type': 'application/json',
+68 silly registry.get     'cache-control': 'max-age=60',
+68 silly registry.get     'content-length': '112376',
+68 silly registry.get     'accept-ranges': 'bytes',
+68 silly registry.get     date: 'Fri, 06 Nov 2015 01:36:37 GMT',
+68 silly registry.get     via: '1.1 varnish',
+68 silly registry.get     age: '0',
+68 silly registry.get     connection: 'keep-alive',
+68 silly registry.get     'x-served-by': 'cache-hkg6826-HKG',
+68 silly registry.get     'x-cache': 'MISS',
+68 silly registry.get     'x-cache-hits': '0',
+68 silly registry.get     'x-timer': 'S1446773796.008273,VS0,VE1591',
+68 silly registry.get     vary: 'Accept' } ]
+69 verbose addNamed [ 'nforce', '1.2.3' ]
+70 verbose addNamed [ '1.2.3', '1.2.3' ]
+71 silly lockFile 504ed1fd-nforce-1-2-3 nforce@1.2.3
+72 verbose lock nforce@1.2.3 /home/rs/.npm/504ed1fd-nforce-1-2-3.lock
+73 silly lockFile e0f5ff22-pmjs-org-nforce-nforce-1-2-3-tgz https://registry.npmjs.org/nforce/-/nforce-1.2.3.tgz
+74 verbose lock https://registry.npmjs.org/nforce/-/nforce-1.2.3.tgz /home/rs/.npm/e0f5ff22-pmjs-org-nforce-nforce-1-2-3-tgz.lock
+75 verbose addRemoteTarball [ 'https://registry.npmjs.org/nforce/-/nforce-1.2.3.tgz',
+75 verbose addRemoteTarball   '685e0916a50720ed7b5b12405e925dbf2bb410e4' ]
+76 info retry fetch attempt 1 at 08:01:35
+77 verbose fetch to= /tmp/npm-5484-9uZqJKgk/registry.npmjs.org/nforce/-/nforce-1.2.3.tgz
+78 http GET https://registry.npmjs.org/nforce/-/nforce-1.2.3.tgz
+79 http 200 https://registry.npmjs.org/nforce/-/nforce-1.2.3.tgz
+80 http 200 https://registry.npmjs.org/request
+81 silly registry.get cb [ 200,
+81 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+81 silly registry.get     etag: '"2EPWMYOQG9WVAVYTBFZAZ36MH"',
+81 silly registry.get     'content-type': 'application/json',
+81 silly registry.get     'cache-control': 'max-age=60',
+81 silly registry.get     'content-length': '175257',
+81 silly registry.get     'accept-ranges': 'bytes',
+81 silly registry.get     date: 'Fri, 06 Nov 2015 01:36:36 GMT',
+81 silly registry.get     via: '1.1 varnish',
+81 silly registry.get     age: '49',
+81 silly registry.get     connection: 'keep-alive',
+81 silly registry.get     'x-served-by': 'cache-hkg6823-HKG',
+81 silly registry.get     'x-cache': 'HIT',
+81 silly registry.get     'x-cache-hits': '4',
+81 silly registry.get     'x-timer': 'S1446773796.014267,VS0,VE0',
+81 silly registry.get     vary: 'Accept' } ]
+82 verbose addNamed [ 'request', '2.65.0' ]
+83 verbose addNamed [ '2.65.0', '2.65.0' ]
+84 silly lockFile 348ca518-request-2-65-0 request@2.65.0
+85 verbose lock request@2.65.0 /home/rs/.npm/348ca518-request-2-65-0.lock
+86 silly lockFile 1eefc59c-s-org-request-request-2-65-0-tgz https://registry.npmjs.org/request/-/request-2.65.0.tgz
+87 verbose lock https://registry.npmjs.org/request/-/request-2.65.0.tgz /home/rs/.npm/1eefc59c-s-org-request-request-2-65-0-tgz.lock
+88 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.65.0.tgz',
+88 verbose addRemoteTarball   'cc1a3bc72b96254734fc34296da322f9486ddeba' ]
+89 info retry fetch attempt 1 at 08:01:38
+90 verbose fetch to= /tmp/npm-5484-9uZqJKgk/registry.npmjs.org/request/-/request-2.65.0.tgz
+91 http GET https://registry.npmjs.org/request/-/request-2.65.0.tgz
+92 http 200 https://registry.npmjs.org/request/-/request-2.65.0.tgz
+93 silly lockFile 1eefc59c-s-org-request-request-2-65-0-tgz https://registry.npmjs.org/request/-/request-2.65.0.tgz
+94 silly lockFile 1eefc59c-s-org-request-request-2-65-0-tgz https://registry.npmjs.org/request/-/request-2.65.0.tgz
+95 silly lockFile 348ca518-request-2-65-0 request@2.65.0
+96 silly lockFile 348ca518-request-2-65-0 request@2.65.0
+97 silly lockFile 5da6dfb1-request-latest request@latest
+98 silly lockFile 5da6dfb1-request-latest request@latest
+99 http 200 https://registry.npmjs.org/express
+100 silly registry.get cb [ 200,
+100 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+100 silly registry.get     etag: '"BJXJG13C3N3EELWQKWU5OWYVA"',
+100 silly registry.get     'content-type': 'application/json',
+100 silly registry.get     'cache-control': 'max-age=60',
+100 silly registry.get     'content-length': '528207',
+100 silly registry.get     'accept-ranges': 'bytes',
+100 silly registry.get     date: 'Fri, 06 Nov 2015 01:36:36 GMT',
+100 silly registry.get     via: '1.1 varnish',
+100 silly registry.get     age: '4',
+100 silly registry.get     connection: 'keep-alive',
+100 silly registry.get     'x-served-by': 'cache-hkg6824-HKG',
+100 silly registry.get     'x-cache': 'HIT',
+100 silly registry.get     'x-cache-hits': '1',
+100 silly registry.get     'x-timer': 'S1446773796.026743,VS0,VE1',
+100 silly registry.get     vary: 'Accept' } ]
+101 verbose addNamed [ 'express', '4.13.3' ]
+102 verbose addNamed [ '4.13.3', '4.13.3' ]
+103 silly lockFile 51f1744e-express-4-13-3 express@4.13.3
+104 verbose lock express@4.13.3 /home/rs/.npm/51f1744e-express-4-13-3.lock
+105 silly lockFile 51f1744e-express-4-13-3 express@4.13.3
+106 silly lockFile 51f1744e-express-4-13-3 express@4.13.3
+107 silly lockFile c30a01ab-express-latest express@latest
+108 silly lockFile c30a01ab-express-latest express@latest
+109 silly lockFile e0f5ff22-pmjs-org-nforce-nforce-1-2-3-tgz https://registry.npmjs.org/nforce/-/nforce-1.2.3.tgz
+110 silly lockFile e0f5ff22-pmjs-org-nforce-nforce-1-2-3-tgz https://registry.npmjs.org/nforce/-/nforce-1.2.3.tgz
+111 silly lockFile 504ed1fd-nforce-1-2-3 nforce@1.2.3
+112 silly lockFile 504ed1fd-nforce-1-2-3 nforce@1.2.3
+113 silly lockFile f165c982-nforce-latest nforce@latest
+114 silly lockFile f165c982-nforce-latest nforce@latest
+115 error Error: EACCES, mkdir '/home/rs/.npm/request/2.65.0'
+115 error  { [Error: EACCES, mkdir '/home/rs/.npm/request/2.65.0']
+115 error   errno: 3,
+115 error   code: 'EACCES',
+115 error   path: '/home/rs/.npm/request/2.65.0',
+115 error   parent: 'node-cloudlending' }
+116 error Please try running this command again as root/Administrator.
+117 error System Linux 3.5.0-37-generic
+118 error command "/usr/bin/node" "/usr/bin/npm" "install"
+119 error cwd /home/rs/Desktop/cloud/cloudlending-master
+120 error node -v v0.10.40
+121 error npm -v 1.4.28
+122 error path /home/rs/.npm/request/2.65.0
+123 error code EACCES
+124 error errno 3
+125 error stack Error: EACCES, mkdir '/home/rs/.npm/request/2.65.0'
+126 verbose exit [ 3, true ]

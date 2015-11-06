@@ -1,0 +1,14 @@
+{
+  "name"         : "node-cloudlending",
+  "version"      : "0.0.0",
+  "description"  : "CloudLending",
+  "main"         : "server.js",
+  "author"       : "Rahil",
+  "dependencies" : {
+
+    "express" : "latest",
+    "nforce":"latest",
+    "request":"latest",
+    "jquery":"latest"
+  }
+}
