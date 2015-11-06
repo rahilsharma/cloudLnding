@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>SalesForce API Example <span class="label label-info">Total Accounts {{ vals.length }}</span></h1>
+    </div>
+    <div id="todo-list" class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <span class="label label-danger" style="font-size:170%;margin-left:-28px">Loan Accounts</span>
+            <div style="margin-top: 17px" ng-repeat="todo in vals.acctNm">
+                <label style="border: medium darkblue">
+                    <a href="#/{{vals.accts[$index]}}">{{ todo }}</a>
+                </label>
+            </div>
+
+        </div>
+    </div>
+</div>

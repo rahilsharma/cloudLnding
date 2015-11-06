@@ -5,7 +5,8 @@ var accounts = [];
 var accNames=[];
 var tokken="";
 var jsonloanAPIresponse={};
-app.use(express.static(__dirname + '/public')); 		// set the static files location /public/img will be /img for users
+var oauth;
+app.use(express.static(__dirname + '/public'));
 var nforce = require('nforce');
 
 var org = nforce.createConnection({
@@ -14,7 +15,7 @@ var org = nforce.createConnection({
     redirectUri: 'http://localhost:3000/oauth/_callback',
     autoRefresh:true
 });
-var oauth;
+//Gets our borrower Id
 var fn=function callAPI(token){
     tokken=token;
     console.log(token);
@@ -37,8 +38,6 @@ var fn=function callAPI(token){
                 accounts.push(chu.Id);
                 accNames.push(chu.Name);
             }
-
-
         }
         else{
             console.log(error);
@@ -47,15 +46,15 @@ var fn=function callAPI(token){
     }
     request.get(options, callback);
 };
+//authenticating using username and password
 org.authenticate({ username: 'darpan@69demo.com', password: 'Merc123!cAsAYYSHbDMGs3tjQMyQiQ80'}, function(err, resp){
     // store the oauth object for this user
     if(!err) oauth = resp;
     fn(oauth.access_token);
 });
 var request = require('request');
-
+//our APIs that are being called
 app.get('/SalesForceAPI/number', function (req,res) {
-   // console.log(accounts.length + "aaaa" + accNames.length);
 var jsonOBJ={
     length:accounts.length,
     acctNm:accNames,
@@ -67,20 +66,14 @@ app.get('/Sales/:LoanInfo', function (req,res) {
     var reqLoanInfo=req.query.LoanInfo;
     console.log('cm her');
 
-    loanAPI(tokken,req.param('LoanInfo'));
-    var jsonOBJ={
-        length:accounts.length,
-        acctNm:accNames,
-        accts:accounts
-    };
-    res.send(jsonOBJ);
+    loanAPI(tokken,req.param('LoanInfo'),res);
+console.log('this started');
+
 })
 app.get('*',function(req,res){
     res.redirect('/public');
 });
-
-
-var loanAPI=function callAPI(token,reqLoanInfo){
+var loanAPI=function callAPI(token,reqLoanInfo,res){
 
     var options = {
         url: 'https://na10.salesforce.com/services/apexrest/peer/v1/loanAccounts/getDetails/'+ reqLoanInfo,
@@ -93,7 +86,18 @@ var loanAPI=function callAPI(token,reqLoanInfo){
         console.log('came till here');
         if (!error && response.statusCode == 200) {
             var info = JSON.parse(body);
-         //  console.log(info.content[0]);
+        //   console.log(info.content);
+            var tmp=[];
+            var tmp1=[];
+            for(var i=0;i<info.content.length;i++){
+                var obj = info.content[i];
+                for(var key in obj){
+                    tmp.push(key);
+                    tmp1.push(obj[key]);
+                }
+            }
+            jsonloanAPIresponse=info.content;
+            res.send(jsonloanAPIresponse);
 
 
         }

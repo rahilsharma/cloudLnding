@@ -3,7 +3,7 @@ rss.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/',{
-                templateUrl: '/index1.html',
+                templateUrl: '/first.html',
                 controller: 'mainController'
             }).
             when('/:acct', {
@@ -26,13 +26,14 @@ rss.controller('mainController', ['$scope','$http', function($scope, $http) {
     rss.controller('AcctCtrl', ['$scope','$http', function($scope, $http) {
         var hjk= window.location.href.split('/');
         console.log(hjk[4]);
+        $scope.showdownloader=false;
         $http({
             method: 'GET',
             url: '/Sales/'+hjk[4]
         }).then(function successCallback(response) {
-            $scope.nmu=response.data.length;
-            $scope.accounts.actNum=response.data.acctNm;
-            $scope.accounts=response.data.accts;
+            $scope.completeObj=response.data;
+            $scope.showdownloader=true;
+            console.log($scope.completeObj);
         }, function errorCallback(response) {
             alert('error' + response);
         });}])

@@ -1,1 +1,56 @@
-<h1>hi there</h1>
+<div class="container">
+    <h2>Loan Account Additional Information</h2>
+    <img ng-hide="showdownloader" src="default.gif"></img>
+    <h3>Id : {{completeObj[0].Id}}</h3>
+    <table class="table table-responsive table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="success">
+            <td>Name</td>
+            <td>{{completeObj[0].Name}}</td>
+        </tr>
+        <tr class="danger">
+            <td>Type</td>
+            <td>{{completeObj[0].attributes.type}}</td>
+        </tr>
+        <tr class="success">
+            <td>URK</td>
+            <td>{{completeObj[0].attributes.url}}</td>
+        </tr>
+        <tr class="success">
+            <td>Active Investor</td>
+            <td>{{completeObj[0].loan__Active_Investor__c}}</td>
+        </tr><tr class="danger">
+            <td>Disbursal Date</td>
+            <td>{{completeObj[0].oan__Disbursal_Date__c}}</td>
+        </tr>
+        <tr class="success">
+            <td>Loan Disbursal Date</td>
+            <td>{{completeObj[0].loan__Expected_Disbursal_Date__c}}</td>
+        </tr><tr class="danger">
+            <td>Interest Calculating Method</td>
+            <td>{{completeObj[0].loan__Interest_Calculation_Method__c}}</td>
+        </tr>
+        <tr class="success">
+            <td>Loan Interest rate</td>
+            <td>{{completeObj[0].loan__Interest_Rate__c}}</td>
+        </tr><tr class="danger">
+            <td>Loan Interest Waived</td>
+            <td>{{completeObj[0].loan__Interest_Waived__c}}</td>
+        </tr>
+        <tr class="success">
+            <td>Loan Last Payment</td>
+            <td>{{completeObj[0].loan__Last_Payment_Date__c}}</td>
+        </tr><tr class="danger">
+            <td>Loan Status</td>
+            <td>{{completeObj[0].loan__Loan_Status__c}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
